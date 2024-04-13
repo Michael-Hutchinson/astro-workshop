@@ -22,6 +22,13 @@ const textCase = 'uppercase';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <style define:vars={{ skillColor, fontWeight, textCase }}>
+    .skill {
+      color: var(--skillColor);
+      font-weight: var(--fontWeight);
+      text-transform: var(--textCase);
+    }
+  </style>
   <h2>... and my new Astro site!</h2>
 
   <p>
@@ -64,16 +71,4 @@ const textCase = 'uppercase';
       <p>My goal is not 3 days.</p>
     )
   }
-
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
 </BaseLayout>
